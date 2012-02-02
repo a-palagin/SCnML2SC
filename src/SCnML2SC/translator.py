@@ -20,6 +20,7 @@ You should have received a copy of the GNU General Public License
 along with OSTIS.  If not, see <http://www.gnu.org/licenses/>.
 -----------------------------------------------------------------------------
 """
+#from apport.hookutils import output
 '''
 Created on 30.12.2010
 
@@ -707,6 +708,104 @@ class SCnFieldSpecConPart(SCnFieldWithEnum):
 
         return output
     
+#############################################################
+    
+class SCnFieldSpecConAntipode(SCnFieldWithEnum):
+    def __init__(self, tokens, par, l):
+        SCnFieldWithEnum.__init__(self, tokens, par, l)
+
+    @staticmethod
+    def keywords():
+        return set([u"антипод*"])
+    
+    def translate(self):
+        conName = "$con" + gen_id()
+        setName = "$set" + gen_id()
+        output = setName +  "={};\n\n"
+        for i in range(len(self.role_attr.keys())-1):
+            syn = "Obj"+str(i)
+            output += setName+ u'->"'+ self.role_attr[syn] +'";\n'
+        output += conName + u'={\n  1_:"' + self.role_attr["MainConcept"]+ u'",\n'
+        output += u'  2_:' + setName+ u'\n};\n\n'
+        output += u'"антипод*"->'+conName+";\n"
+        output += self.addContype(conName) 
+        output += self.addContype(setName)
+        return output
+    
+class SCnFieldSpecConPrototype(SCnFieldWithEnum):
+    def __init__(self, tokens, par, l):
+        SCnFieldWithEnum.__init__(self, tokens, par, l)
+        
+    @staticmethod
+    def keywords():
+        return set([u"аналог*"])
+    
+    def translate(self):
+        conName = "$con" + gen_id()
+        setName = "$set" + gen_id()
+        output = setName +  "={};\n\n"
+        for i in range(len(self.role_attr.keys())-1):
+            syn = "Obj"+str(i)
+            output += setName+ u'->"'+ self.role_attr[syn] +'";\n'
+        output += conName + u'={\n  1_:"' + self.role_attr["MainConcept"]+ u'",\n'
+        output += u'  2_:' + setName+ u'\n};\n\n'
+        output += u'"аналог*"->'+conName+";\n"
+        output += self.addContype(conName) 
+        output += self.addContype(setName)
+        return output
+
+class SCnFieldSpecConRuleIdent(SCnFieldWithEnum):
+    def __init__(self, tokens, par, l):
+        SCnFieldWithEnum.__init__(self, tokens, par, l)
+        
+    @staticmethod
+    def keywords():
+        return set([u"правила идентификации элементов*"])
+    
+    def translate(self):
+        conName = "$con" + gen_id()
+        setName = "$set" + gen_id()
+        output = setName +  "={};\n\n"
+        for i in range(len(self.role_attr.keys())-1):
+            syn = "Obj"+str(i)
+            output += setName+ u'->"'+ self.role_attr[syn] +'";\n'
+        output += conName + u'={\n  1_:"' + self.role_attr["MainConcept"]+ u'",\n'
+        output += u'  2_:' + setName+ u'\n};\n\n'
+        output += u'"правила идентификации элементов*"->'+conName+";\n"
+        output += self.addContype(conName) 
+        output += self.addContype(setName)
+        return output
+    
+class SCnFieldSpecConMemberEl(SCnField):
+    def __init__(self, tokens, par, l):
+        SCnField.__init__(self, tokens, par, l)
+        self.num = 0
+        self.role_attr["MainConcept"]=SCnField.formatIdtf(par)
+        self.el = SCnField.formatIdtf(tokens[2][0])
+        
+    @staticmethod
+    def keywords():
+        return set()
+    
+    def translate(self):
+        output = u'"'+self.role_attr["MainConcept"]+'"->"'+ self.el+u'";\n'
+        return output
+    
+class SCnFieldSpecConExampleConcepts(SCnFieldWithEnum):
+    def __init__(self, tokens, par, l):
+        SCnFieldWithEnum.__init__(self, tokens, par, l)
+        
+    @staticmethod
+    def keywords():
+        return set([u"пример_"])
+    
+    def translate(self):
+        output = ""
+        for i in range(len(self.role_attr.keys())-1):
+            syn = "Obj"+str(i)
+            output += u'"' + self.role_attr[syn] + u'"={ "пример_": "'+ self.role_attr["MainConcept"] + u'" };\n\n'
+        return output
+#######################################################    
 class SCnFieldSpecConArt(SCnFieldWithEnum):
     def __init__(self,tokens,par,l):
         SCnFieldWithEnum.__init__(self,tokens,par,l)
@@ -884,6 +983,11 @@ class TranslaterForArticle:
         self.fieldFact[u"SCnFieldSpecConStateUnambObjSet"] = SCnFieldSpecConStateUnambObjSet
         #self.fieldFact[u"SCnFieldSpecConRuleIdent"] = SCnFieldSpecConRuleIdent
         #self.fieldFact[u"SCnFieldSpecConStat"] = SCnFieldSpecConStat
+        self.fieldFact[u"SCnFieldSpecConAntipode"] = SCnFieldSpecConAntipode
+        self.fieldFact[u"SCnFieldSpecConPrototype"] = SCnFieldSpecConPrototype
+        self.fieldFact[u"SCnFieldSpecConRuleIdent"] = SCnFieldSpecConRuleIdent
+        self.fieldFact[u"SCnFieldSpecConExampleConcepts"] = SCnFieldSpecConExampleConcepts
+        self.fieldFact[u"SCnFieldSpecConMemberEl"] = SCnFieldSpecConMemberEl
         self.fieldFact[u"SCnFieldSpecConExample"] = SCnFieldSpecConExample
         self.fieldFact[u"SCnFieldSpecConSevStat"] = SCnFieldSpecConSevStat
         self.fieldFact[u"SCnFieldSpecConDomainDef"] = SCnFieldSpecConDomainDef
