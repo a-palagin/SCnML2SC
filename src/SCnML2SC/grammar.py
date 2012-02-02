@@ -154,8 +154,12 @@ textINm = Combine(OneOrMore(TXT^link),u" ", adjacent=False).setResultsName('text
 
 #SCnFieldSpecConSyn rule
 conSyn = u"SCnFieldSpecConSyn"+Suppress(V)+level+Suppress(V)+ scnIdtf
-SCnFieldSpecConSyn = nestedExpr(B,E,conSyn).setResultsName('SCnFieldSpecConSyn') 
+SCnFieldSpecConSyn = nestedExpr(B,E,conSyn).setResultsName('SCnFieldSpecConSyn')
 
+
+def conversionLogic(s,l,t):
+    print t[0][0] 
+logic = Group(oneOf(u"SCnLStatement")).setParseAction(conversionLogic)
 '''
 SCnFieldCompComment
 SCnFieldSpecConMemberSet
@@ -219,7 +223,10 @@ fieldNamesWithEn = oneOf(u"SCnFieldSpecRelDomainSet SCnFieldSpecRelDomainSuperSe
            u"SCnFieldSpecConDomainDef SCnFieldSpecConDomain " \
            u"SCnFieldSpecConRelSchema SCnFieldSpecRelDomainIntersSet " \
            u"SCnFieldSpecRelDomainIntersSet SCnFieldSpecConPrivDef " \
-           u"SCnFieldSpecConGlossLink SCnFieldSpecConАntipode " \
+           u"SCnFieldSpecConGlossLink SCnFieldSpecConAntipode " \
+           u"SCnFieldSpecConPrototype SCnFieldSpecConRuleIdent" \
+           u"SCnFieldSpecConMemberEl SCnFieldSpecConSubjResearch" \
+           u"SCnFieldSpecConObjResearch "
            u"SCnFieldSpecConSCgtext SCnFieldSpecConArt " \
            u"SCnFieldSpecConFormationRule SCnFieldSpecConPrototype " \
            u"SCnFieldSpecConExampleConcepts SCnFieldSpecConExampleConcept")
