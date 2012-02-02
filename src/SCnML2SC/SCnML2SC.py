@@ -36,6 +36,8 @@ import shutil
 
 
 import locale as lc
+loc = lc.getlocale()
+lc.setlocale(lc.LC_ALL,'C' )
 #lc.setlocale(lc.LC_ALL, ('English_United States', '1251'))
 encoding = lc.getlocale()[1]
 if not encoding:
