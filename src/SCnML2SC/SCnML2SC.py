@@ -45,7 +45,7 @@ if not encoding:
 
 reload(sys)
 
-#sys.setdefaultencoding(encoding)
+sys.setdefaultencoding(encoding)
 #sys.setdefaultencoding(encoding)
 sys.stdout = codecs.getwriter(encoding)(sys.stdout, errors = "replace")
 sys.stderr = codecs.getwriter(encoding)(sys.stderr, errors = "replace")
