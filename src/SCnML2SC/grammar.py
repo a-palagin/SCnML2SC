@@ -170,7 +170,8 @@ SCnFieldSpecConSemProxim rules
 '''
 fieldNamesWithTIN = oneOf(u"SCnFieldSpecConPropSubset SCnFieldSpecConSemProxim " \
                           u"SCnFieldSpecConSuperset SCnFieldSpecConMemberSet " \
-                          u"SCnFieldCompComment SCnFieldSpecConPropSuperset")
+                          u"SCnFieldCompComment SCnFieldSpecConPropSuperset " \
+                          u"SCnFieldSpecConMemberEl")
 
 conWithIN = fieldNamesWithTIN+Suppress(V)+level+Suppress(V)+ textIN
 SCnFieldWithTIN = nestedExpr(B,E,conWithIN).setResultsName('SCnFieldWithTIN') 
@@ -224,9 +225,9 @@ fieldNamesWithEn = oneOf(u"SCnFieldSpecRelDomainSet SCnFieldSpecRelDomainSuperSe
            u"SCnFieldSpecConRelSchema SCnFieldSpecRelDomainIntersSet " \
            u"SCnFieldSpecRelDomainIntersSet SCnFieldSpecConPrivDef " \
            u"SCnFieldSpecConGlossLink SCnFieldSpecConAntipode " \
-           u"SCnFieldSpecConPrototype SCnFieldSpecConRuleIdent" \
-           u"SCnFieldSpecConMemberEl SCnFieldSpecConSubjResearch" \
-           u"SCnFieldSpecConObjResearch "
+           u"SCnFieldSpecConPrototype SCnFieldSpecConRuleIdent " \
+           u"SCnFieldSpecConSubjResearch " \
+           u"SCnFieldSpecConObjResearch SCnFieldSpecConIndefinableConcepts " \
            u"SCnFieldSpecConSCgtext SCnFieldSpecConArt " \
            u"SCnFieldSpecConFormationRule SCnFieldSpecConPrototype " \
            u"SCnFieldSpecConExampleConcepts SCnFieldSpecConExampleConcept")
