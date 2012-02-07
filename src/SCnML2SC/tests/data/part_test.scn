@@ -1,0 +1,35 @@
+{{SCnBegin}}
+{{SCnFieldConcept|Акс.(плоскость; геометрическая точка)}}
+{{SCnLStatement|1|
+        {{SCnLUniversal|1}} {{SCnLVar|_ti}}, {{SCnLVar|_tj}}, {{SCnLVar|_tk}} {{SCnLThereIs|1}}
+            {{SCnLevel|1}} {{SCnLImplication|1}}
+                {{SCnLevel|2|{{SCn_перечисление|1}}}} {{SCnLIf|1}}
+                    {{SCnLAtomicExist|
+                        {{SCnLSet| {{SCnLVar|_ti}}, {{SCnLVar|_tj}}, {{SCnLVar|_tk}}}} {{SCn_принадлежность}} {{SCnLConcept|[[Геометрия:Непрямолинейная тройка точек|непрямолинейная тройка точек]]}}
+                    }};
+                {{SCnLevel|2|{{SCn_перечисление|1}}}} {{SCnLThen|1}}
+                    {{SCnLExistential|1}} {{SCnLVar| {{SCnLTex|\alpha}}}} {{SCnLExistentialPropPref|1}}
+                        {{SCnLevel|2}} {{SCnLСonjunction|1}}
+                            {{SCnLevel|3|{{SCn_перечисление|2}}}} {{SCnLAtomicExist|
+                                {{SCnLVar| {{SCnLTex|\alpha}}}} {{SCn_принадлежность}} {{SCnLConcept|[[Геометрия:Плоскость|плоскость]]}};
+                                {{SCnLevel|3}} {{SCnLVar|_ti}} {{SCn_принадлежность}} {{SCnLVar|{{SCnLTex|\alpha}}}};
+                                {{SCnLevel|3}} {{SCnLVar|_tj}} {{SCn_принадлежность}} {{SCnLVar|{{SCnLTex|\alpha}}}};
+                                {{SCnLevel|3}} {{SCnLVar|_tk}} {{SCn_принадлежность}} {{SCnLVar|{{SCnLTex|\alpha}}}}
+                            }};
+                            {{SCnLevel|3|{{SCn_перечисление|2}}}} {{SCnLUniversal|1}} {{SCnLVar| {{SCnLTex|\beta}}}} {{SCnLThereIs|1}}
+                                {{SCnLevel|3}} {{SCnLImplication|1}}
+                                    {{SCnLevel|4|{{SCn_перечисление|3}}}} {{SCnLIf|1}}
+                                        {{SCnLAtomicExist|
+                                            {{SCnLVar| {{SCnLTex|\beta}}}} {{SCn_принадлежность}} {{SCnLConcept|[[Геометрия:Плоскость|плоскость]]}},
+                                            {{SCnLVar|_ti}} {{SCn_принадлежность}} {{SCnLVar| {{SCnLTex|\beta}}}},
+                                            {{SCnLVar|_tj}} {{SCn_принадлежность}} {{SCnLVar| {{SCnLTex|\beta}}}},
+                                            {{SCnLVar|_tk}} {{SCn_принадлежность}} {{SCnLVar| {{SCnLTex|\beta}}}}
+                                        }};
+                                    {{SCnLevel|4|{{SCn_перечисление|3}}}} {{SCnLThen|1}}
+                                        {{SCnLAtomicExist|
+                                            {{SCnLSet| {{SCnLVar| {{SCnLTex|\alpha}}}}, {{SCnLVar| {{SCnLTex|\beta}}}} }} {{SCn_принадлежность}} {{SCnLConcept|совпадение*}}
+                                        }}
+    .|cont }}
+
+{{SCnEnd}}
+{{Category_sort|Геометрия}}

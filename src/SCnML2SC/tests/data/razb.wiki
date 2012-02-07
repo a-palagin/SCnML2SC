@@ -1,0 +1,126 @@
+{| cellspacing="0" cellpadding="0" border="0" width="100%"
+|- valign="top"
+| colspan="7" |<span class="formal-text-main">множество</span>
+
+|- valign="top"
+|  {{lcw}} | {{маркер_синонимия}} 
+| colspan="6" |<span class="formal-text-secondary">sc-множество</span>
+
+|- valign="top"
+|  {{lcw}} | {{маркер_синонимия}} 
+| colspan="6" |<span class="formal-text-secondary">знак конкретного множества sc-элементов </span>
+
+|- valign="top"
+|  {{lcw}} | {{маркер_синонимия}} 
+| colspan="6" |<span class="formal-text-secondary">знак конкретного <u>внутреннего</u> объекта, описываемого sc-конструкцией</span>
+
+|- valign="top"
+|  {{lcw}} | {{маркер_синонимия}} 
+| colspan="6" |<span class="formal-text-secondary"> внутренний конкретный объект, описываемый sc-конструкцией</span>
+
+|- valign="top"
+|  {{lcw}} | {{маркер_синонимия}} 
+| colspan="6" |<span class="formal-text-secondary">объект, описываемый sc-конструкцией и являющийся частью самой этой sc-конструкции</span>
+
+|- valign="top"
+|  {{lcw}} | {{маркер_тире}} 
+| colspan="6" |<span class="keyword">Разбиение</span> по типам множеств:
+
+|- valign="top"
+|  {{lcw}} |
+|  {{lcw}} | {{маркер_перечисление1}} 
+| colspan="5" |<span class="formal-text-secondary">структура</span>
+
+|- valign="top"
+|  {{lcw}} |
+|  {{lcw}} |
+|  {{lcw}} | {{маркер_синонимия}} 
+| colspan="4" |<span class="formal-text-secondary">структура sc-элементов </span>
+
+|- valign="top"
+|  {{lcw}} |
+|  {{lcw}} |
+|  {{lcw}} | {{маркер_синонимия}} 
+| colspan="4" |<span class="formal-text-secondary">sc-структура</span>
+
+|- valign="top"
+|  {{lcw}} |
+|  {{lcw}} |
+|  {{lcw}} | {{маркер_синонимия}} 
+| colspan="4" |<span class="formal-text-secondary">знак конкретной структуры sc-элементов </span>
+
+|- valign="top"
+|  {{lcw}} |
+|  {{lcw}} |
+|  {{lcw}} | {{маркер_синонимия}} 
+| colspan="4" |<span class="formal-text-secondary">знак конкретной структуры, состоящей из sc-элементов </span>
+
+|- valign="top"
+|  {{lcw}} |
+|  {{lcw}} |
+|  {{lcw}} |
+|  {{lcw}} | <span class="comment">/*</span>
+| colspan="3" |<span class="comment">в состав такой структуры могут входить связки, связывающие sc-элементы, входящие в эту же структуру  */ </span>
+
+|- valign="top"
+|  {{lcw}} |
+|  {{lcw}} |
+|  {{lcw}} | {{маркер_синонимия}} 
+| colspan="4" |<span class="formal-text-secondary">множество, составленное из sc-элементов, которые вместе обладают некоторой целостностью, имеющей некоторые важные свойства  </span>
+
+|- valign="top"
+|  {{lcw}} |
+|  {{lcw}} |
+|  {{lcw}} |
+|  {{lcw}} | <span class="comment">/*</span>
+| colspan="3" |<span class="comment">Таким образом, структура sc-элементов {{маркер_тире}}  это такое множество sc-элементов, которое формируется по принципу целостности. Другими словами, структура sc-элементов {{маркер_тире}}  это переход некоторого количества (набора) sc-элементов в некоторое новое <u>качество</u> */ </span>
+
+|- valign="top"
+|  {{lcw}} |
+|  {{lcw}} |
+|  {{lcw}} | {{маркер_синонимия}} 
+| colspan="4" |<span class="formal-text-secondary">целостное множество sc-элементов</span>
+
+|- valign="top"
+|  {{lcw}} |
+|  {{lcw}} |
+|  {{lcw}} | {{маркер_синонимия}} 
+| colspan="4" |<span class="formal-text-secondary">множество sc-элементов, обладающее некоторой целостностью </span>
+
+|- valign="top"
+|  {{lcw}} |
+|  {{lcw}} |
+|  {{lcw}} | {{маркер_синонимия}} 
+| colspan="4" |<span class="formal-text-secondary">множество sc-элементов, характеризующее переход количества sc-элементов к некоторому новому качеству</span>
+
+|- valign="top"
+|  {{lcw}} |
+|  {{lcw}} | {{маркер_перечисление1}} 
+| colspan="5" |<span class="formal-text-secondary">понятие</span>
+
+|- valign="top"
+|  {{lcw}} |
+|  {{lcw}} |
+|  {{lcw}} | {{маркер_синонимия}} 
+| colspan="4" |<span class="formal-text-secondary">класс sc-элементов </span>
+
+|- valign="top"
+|  {{lcw}} |
+|  {{lcw}} |
+|  {{lcw}} | {{маркер_синонимия}} 
+| colspan="4" |<span class="formal-text-secondary">множество семантически однотипных sc-элементов </span>
+
+|- valign="top"
+|  {{lcw}} |
+|  {{lcw}} |
+|  {{lcw}} | {{маркер_синонимия}} 
+| colspan="4" |<span class="formal-text-secondary">множество всех тех и только тех sc-элементов, которые обладают некоторым заданным свойством </span>
+
+|- valign="top"
+|  {{lcw}} |
+|  {{lcw}} |
+|  {{lcw}} |
+|  {{lcw}} | <span class="comment">/*</span>
+| colspan="3" |<span class="comment">таким образом, понятие  {{маркер_тире}}  это множество sc-элементов, в основе формирования которого лежит семантическая эквивалентность sc-элементов по отношению к некоторому заданному свойству */ </span>
+
+|}

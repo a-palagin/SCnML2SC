@@ -1,0 +1,100 @@
+{{links_header|[[:Категория:Глоссарий_проекта_10|Глоссарий проекта 10]]||}}
+
+{| cellspacing="0" cellpadding="0" border="0" width="100%"
+
+|- valign="top" 
+| colspan="9" | {{Шаблон:Anchor_link|name=Алфавит sc-элементов|text=<span class="formal-text-main">Алфавит sc-элементов</span>}}
+
+|- valign="top"
+|  {{lcw}}| {{маркер_синонимия}}
+| colspan="8" | <span class="formal-text-secondary">синтаксический вид sc-элементов</span> 
+
+|- valign="top"
+|  {{lcw}}| {{маркер_синонимия}}
+| colspan="8" | <span class="formal-text-secondary">синтаксический тип sc-элементов</span> 
+
+|- valign="top"
+|  {{lcw}}| {{маркер_синонимия}}
+| colspan="8" | <span class="formal-text-secondary">основной синтаксически задаваемый класс sc-элементов</span> 
+
+|- valign="top"
+|  {{lcw}}| {{маркер_синонимия}}
+| colspan="8" | <span class="formal-text-secondary">синтаксически задаваемый  класс sc-элементов, принадлежащий Алфавиту SC-кода</span> 
+
+|- valign="top"
+|  {{lcw}}| {{маркер_синонимия}}
+| colspan="8" | <span class="formal-text-secondary">неявно задаваемый класс sc-элементов</span> 
+
+|- valign="top"
+|  {{lcw}}| {{маркер_синонимия}}
+| colspan="8" | <span class="formal-text-secondary">Семейство основных синтаксически задаваемых классов sc-элементов</span> 
+
+|- valign="top"
+|  {{lcw}}| {{маркер_синонимия}}
+| colspan="8" | <span class="formal-text-secondary">Семейство основных синтаксически выделяемых и <u>попарно непересекающихся</u> классов sc-элементов</span> 
+
+|- valign="top"
+|  {{lcw}}| {{маркер_синонимия}}
+| colspan="8" | <span class="formal-text-secondary">Алфавит элементов унифицированных семантических сетей</span> 
+
+|- valign="top"
+|  {{lcw}}| {{маркер_синонимия}}
+| colspan="8" | <span class="formal-text-secondary">Алфавит атомарных фрагментов sc-конструкций</span> 
+
+|- valign="top"
+|  {{lcw}}| {{маркер_синонимия}}
+| colspan="8" | <span class="formal-text-secondary">Алфавит SC-кода</span> 
+  
+|- valign="top"
+|  {{lcw}}| {{маркер_пример}}
+| colspan="8" | {{link_glossary|[[sc-узел=гл_10|<span class="formal-text-secondary">sc-узел</span>]]}}
+
+|- valign="top"
+|  {{lcw}}| {{маркер_пример}}
+| colspan="8" | {{link_glossary|[[sc-ребро=гл_10|<span class="formal-text-secondary">sc-ребро</span>]]}}
+
+|- valign="top"
+|  {{lcw}}| {{маркер_пример}}
+| colspan="8" | {{link_glossary|[[sc-дуга общего вида=гл_10|<span class="formal-text-secondary">sc-дуга общего вида</span>]]}}
+
+|- valign="top"
+|  {{lcw}}| {{маркер_пример}}
+| colspan="8" | {{link_glossary|[[sc-дуга основного вида=гл_10|<span class="formal-text-secondary">sc-дуга основного вида</span>]]}} 
+
+|- valign="top"
+|  {{lcw}}| {{маркер_пример}}
+| colspan="8" | {{link_glossary|[[sc-рамка=гл_10|<span class="formal-text-secondary">sc-рамка</span>]]}}
+
+|- valign="top"
+|  {{lcw}}| {{маркер_тире}}
+| colspan="8" | <span class="keyword">Фактографическое высказывание</span>
+
+|- valign="top"
+|  {{lcw}}| 
+| colspan="8" | 
+{|  cellspacing="0" cellpadding="0" border="1" style="border: medium solid black; width:300px;"
+|-
+| align="left" | [[Image:P_GL10_алфавит sc-элементов_1.png]]
+|}
+
+|- valign="top"
+|  {{lcw}}| {{маркер_тире}}
+| colspan="8" | <span class="keyword">Фактографическое высказывание</span>
+
+|- valign="top"
+|  {{lcw}}| 
+| colspan="8" | 
+{|  cellspacing="0" cellpadding="0" border="1" style="border: medium solid black; width:300px;"
+|-
+| align="left" | [[Image:P_GL10_алфавит sc-элементов_2.png]]
+|}
+
+|- valign="top" 
+| {{lcw}}|
+| {{lcw}} | <span class="comment">/*</span>
+| <span class="comment">т.е. Алфавит SC-кода является одним из возможных разбиений множества sc-элементов */</span>
+
+|- valign="top" 
+| {{lcw}} | {{маркер_тире}}
+| colspan="8" |<span class="keyword">См.</span> {{link_look|[[Подпроект_100|Раздел 100]]}}
+|}
