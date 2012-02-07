@@ -27,6 +27,7 @@ Created on 24.12.2010
 @author: Kolb Dmitry
 '''
 from pyparsing import *
+import re
 
 #general tokens
 level = Word(nums)
@@ -127,6 +128,7 @@ otherTag = nestedExpr(B,E)
 breakMark = u"SCnLevel" +V+ level+Optional(V)+ Optional(otherTag^TXT)
 breakMark.setParseAction(replaceWith(u"<br/>"))
 
+                
 fontMark = Group(oneOf(u"SCnTextMain SCnTextSecond SCnTextKeyword SCnVar") + Suppress(V) + Combine(OneOrMore(TXT^link),u" ", adjacent=False)).setParseAction(conversionMark)
 
 
@@ -141,7 +143,7 @@ def conversionFormula(s,l,t):
     #print t[0][0]
     return ["<math>"+t[0][0]+"</math>"]  
 formula = nestedExpr("<math>","</math>").setResultsName("formula")
-formula.setParseAction(conversionFormula) 
+formula.setParseAction(conversionFormula)
 
 unknown = u"{" + Combine(OneOrMore(TXT^link^tag^formula),u" ", adjacent=False) + SkipTo(u"}")+ u"}"
 
@@ -158,8 +160,13 @@ SCnFieldSpecConSyn = nestedExpr(B,E,conSyn).setResultsName('SCnFieldSpecConSyn')
 
 
 def conversionLogic(s,l,t):
-    print t[0][0] 
-logic = Group(oneOf(u"SCnLStatement")).setParseAction(conversionLogic)
+    print s
+    print l
+    print t
+logic= u"SCnLStatement"+Suppress(V) + level +QuotedString("|", escQuote="|cont",multiline=True,endQuoteChar="|cont")
+
+SCnLStatement = nestedExpr(B,E,logic).setResultsName('SCnLStatement')
+logic.setParseAction(conversionLogic)
 '''
 SCnFieldCompComment
 SCnFieldSpecConMemberSet
@@ -241,6 +248,7 @@ field = Or([
            SCnFieldSpecConPart,
            SCnFieldCompEnum,
            SCnFieldSpecConSemEq,
+           SCnLStatement,
            SCnFieldGenRoleElRel,
            SCnFieldCompArt,
            SCnFieldWithEnum
